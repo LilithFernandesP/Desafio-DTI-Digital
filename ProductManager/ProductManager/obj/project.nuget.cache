@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "Sd8MRLFBOPA=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\poder\\source\\repos\\challenges\\ProductManager\\ProductManager\\ProductManager.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\poder\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.8\\microsoft.aspnetcore.openapi.9.0.8.nupkg.sha512",
+    "C:\\Users\\poder\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
