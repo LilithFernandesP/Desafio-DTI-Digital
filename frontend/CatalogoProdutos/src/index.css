@@ -1,7 +1,10 @@
 @import "tailwindcss";
+@import '@fontsource/courier-prime';
+@import '@fontsource/courier-prime/400.css';
+@import '@fontsource/courier-prime/400-italic.css';
 
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "courier-prime", monospace;
   line-height: 1.5;
   font-weight: 400;
 

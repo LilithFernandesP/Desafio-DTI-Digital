@@ -50,24 +50,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\poder\\Documents\\Programacao\\Desafio-DTI\\ProductManager\\ProductManager\\Program.cs",
               "RelativeDocumentMoniker": "ProductManager\\Program.cs",
-              "ToolTip": "C:\\Users\\poder\\Documents\\Programacao\\Desafio-DTI\\ProductManager\\ProductManager\\Program.cs*",
-              "RelativeToolTip": "ProductManager\\Program.cs*",
+              "ToolTip": "C:\\Users\\poder\\Documents\\Programacao\\Desafio-DTI\\ProductManager\\ProductManager\\Program.cs",
+              "RelativeToolTip": "ProductManager\\Program.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-12T00:51:52.296Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Document",
@@ -79,8 +79,7 @@
               "RelativeToolTip": "ProductManager\\data\\ApplicationDbContext.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAYwBUAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T23:19:00.116Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-11T23:19:00.116Z"
             },
             {
               "$type": "Document",
@@ -92,8 +91,7 @@
               "RelativeToolTip": "ProductManager\\Migrations\\20251211225052_Alteracao na tabela Carrinho Item.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T22:50:52.636Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-11T22:50:52.636Z"
             },
             {
               "$type": "Document",
@@ -105,8 +103,7 @@
               "RelativeToolTip": "ProductManager\\Migrations\\20251211224531_Alteracao na tabela de Carrinho e CarrinhoItem.cs",
               "ViewState": "AgIAADcAAAAAAAAAAAAgwDsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T22:45:32.104Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-11T22:45:32.104Z"
             },
             {
               "$type": "Document",
@@ -118,8 +115,7 @@
               "RelativeToolTip": "ProductManager\\Controllers\\ProdutoController.cs",
               "ViewState": "AgIAABoAAAAAAAAAAAAQwDkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T22:20:12.277Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-11T22:20:12.277Z"
             },
             {
               "$type": "Document",
@@ -131,8 +127,7 @@
               "RelativeToolTip": "ProductManager\\Controllers\\CarrinhoItemController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T22:22:01.183Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-11T22:22:01.183Z"
             },
             {
               "$type": "Document",
@@ -144,8 +139,7 @@
               "RelativeToolTip": "ProductManager\\models\\entities\\Carrinho.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T22:10:46.852Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-11T22:10:46.852Z"
             },
             {
               "$type": "Document",
@@ -157,8 +151,7 @@
               "RelativeToolTip": "ProductManager\\models\\entities\\CarrinhoItem.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T22:05:05.33Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-11T22:05:05.33Z"
             },
             {
               "$type": "Document",
@@ -170,8 +163,7 @@
               "RelativeToolTip": "ProductManager\\models\\Dto\\AdicionarCarrinhoItemDto.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAADwvwUAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T22:03:54.536Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-11T22:03:54.536Z"
             },
             {
               "$type": "Document",
@@ -183,8 +175,7 @@
               "RelativeToolTip": "ProductManager\\Controllers\\CarrinhoController.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAmwEoAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T21:53:53.683Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-11T21:53:53.683Z"
             }
           ]
         }
