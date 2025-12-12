@@ -4,8 +4,15 @@ using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowLocalhost",
+        builder => builder.WithOrigins("http://localhost:5174")
+            .AllowAnyMethod()
+            .AllowAnyHeader());
+});
 
+// Add services to the container.
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
@@ -21,6 +28,8 @@ if (app.Environment.IsDevelopment())
     app.MapScalarApiReference();
     app.MapOpenApi();
 }
+
+app.UseCors("AllowLocalhost");
 
 app.UseHttpsRedirection();
 

@@ -1,0 +1,15 @@
+@import "tailwindcss";
+#root {
+  margin: 0 auto;
+  width: 100%;
+  color: #211304;
+}
+
+@layer components{
+  .Navbar {
+    @apply text-2xl font-bold leading-tight;
+  }
+  .Navbar i {
+    @apply text-3xl;
+  }
+}

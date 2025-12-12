@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\poder\\Documents\\Programacao\\Desafio-DTI\\ProductManager\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{2E1ADB6B-6674-48E5-B52F-562F0C4508C2}|ProductManager\\ProductManager.csproj|c:\\users\\poder\\documents\\programacao\\desafio-dti\\productmanager\\productmanager\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E1ADB6B-6674-48E5-B52F-562F0C4508C2}|ProductManager\\ProductManager.csproj|solutionrelative:productmanager\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2E1ADB6B-6674-48E5-B52F-562F0C4508C2}|ProductManager\\ProductManager.csproj|c:\\users\\poder\\documents\\programacao\\desafio-dti\\productmanager\\productmanager\\controllers\\carrinhoitemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2E1ADB6B-6674-48E5-B52F-562F0C4508C2}|ProductManager\\ProductManager.csproj|solutionrelative:productmanager\\controllers\\carrinhoitemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -46,27 +50,41 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\poder\\Documents\\Programacao\\Desafio-DTI\\ProductManager\\ProductManager\\Program.cs",
+              "RelativeDocumentMoniker": "ProductManager\\Program.cs",
+              "ToolTip": "C:\\Users\\poder\\Documents\\Programacao\\Desafio-DTI\\ProductManager\\ProductManager\\Program.cs*",
+              "RelativeToolTip": "ProductManager\\Program.cs*",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-12T00:51:52.296Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\poder\\Documents\\Programacao\\Desafio-DTI\\ProductManager\\ProductManager\\data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "ProductManager\\data\\ApplicationDbContext.cs",
               "ToolTip": "C:\\Users\\poder\\Documents\\Programacao\\Desafio-DTI\\ProductManager\\ProductManager\\data\\ApplicationDbContext.cs",
               "RelativeToolTip": "ProductManager\\data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAA3wBUAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAYwBUAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T23:19:00.116Z"
+              "WhenOpened": "2025-12-11T23:19:00.116Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "20251211225052_Alteracao na tabela Carrinho Item.cs",
               "DocumentMoniker": "C:\\Users\\poder\\Documents\\Programacao\\Desafio-DTI\\ProductManager\\ProductManager\\Migrations\\20251211225052_Alteracao na tabela Carrinho Item.cs",
               "RelativeDocumentMoniker": "ProductManager\\Migrations\\20251211225052_Alteracao na tabela Carrinho Item.cs",
@@ -74,11 +92,12 @@
               "RelativeToolTip": "ProductManager\\Migrations\\20251211225052_Alteracao na tabela Carrinho Item.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T22:50:52.636Z"
+              "WhenOpened": "2025-12-11T22:50:52.636Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "20251211224531_Alteracao na tabela de Carrinho e CarrinhoItem.cs",
               "DocumentMoniker": "C:\\Users\\poder\\Documents\\Programacao\\Desafio-DTI\\ProductManager\\ProductManager\\Migrations\\20251211224531_Alteracao na tabela de Carrinho e CarrinhoItem.cs",
               "RelativeDocumentMoniker": "ProductManager\\Migrations\\20251211224531_Alteracao na tabela de Carrinho e CarrinhoItem.cs",
@@ -86,11 +105,12 @@
               "RelativeToolTip": "ProductManager\\Migrations\\20251211224531_Alteracao na tabela de Carrinho e CarrinhoItem.cs",
               "ViewState": "AgIAADcAAAAAAAAAAAAgwDsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T22:45:32.104Z"
+              "WhenOpened": "2025-12-11T22:45:32.104Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "ProdutoController.cs",
               "DocumentMoniker": "C:\\Users\\poder\\Documents\\Programacao\\Desafio-DTI\\ProductManager\\ProductManager\\Controllers\\ProdutoController.cs",
               "RelativeDocumentMoniker": "ProductManager\\Controllers\\ProdutoController.cs",
@@ -103,20 +123,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "CarrinhoItemController.cs",
               "DocumentMoniker": "C:\\Users\\poder\\Documents\\Programacao\\Desafio-DTI\\ProductManager\\ProductManager\\Controllers\\CarrinhoItemController.cs",
               "RelativeDocumentMoniker": "ProductManager\\Controllers\\CarrinhoItemController.cs",
               "ToolTip": "C:\\Users\\poder\\Documents\\Programacao\\Desafio-DTI\\ProductManager\\ProductManager\\Controllers\\CarrinhoItemController.cs",
               "RelativeToolTip": "ProductManager\\Controllers\\CarrinhoItemController.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAtwB0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-11T22:22:01.183Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Carrinho.cs",
               "DocumentMoniker": "C:\\Users\\poder\\Documents\\Programacao\\Desafio-DTI\\ProductManager\\ProductManager\\models\\entities\\Carrinho.cs",
               "RelativeDocumentMoniker": "ProductManager\\models\\entities\\Carrinho.cs",
@@ -124,11 +144,12 @@
               "RelativeToolTip": "ProductManager\\models\\entities\\Carrinho.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T22:10:46.852Z"
+              "WhenOpened": "2025-12-11T22:10:46.852Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "CarrinhoItem.cs",
               "DocumentMoniker": "C:\\Users\\poder\\Documents\\Programacao\\Desafio-DTI\\ProductManager\\ProductManager\\models\\entities\\CarrinhoItem.cs",
               "RelativeDocumentMoniker": "ProductManager\\models\\entities\\CarrinhoItem.cs",
@@ -136,11 +157,12 @@
               "RelativeToolTip": "ProductManager\\models\\entities\\CarrinhoItem.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T22:05:05.33Z"
+              "WhenOpened": "2025-12-11T22:05:05.33Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "AdicionarCarrinhoItemDto.cs",
               "DocumentMoniker": "C:\\Users\\poder\\Documents\\Programacao\\Desafio-DTI\\ProductManager\\ProductManager\\models\\Dto\\AdicionarCarrinhoItemDto.cs",
               "RelativeDocumentMoniker": "ProductManager\\models\\Dto\\AdicionarCarrinhoItemDto.cs",
@@ -153,7 +175,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "CarrinhoController.cs",
               "DocumentMoniker": "C:\\Users\\poder\\Documents\\Programacao\\Desafio-DTI\\ProductManager\\ProductManager\\Controllers\\CarrinhoController.cs",
               "RelativeDocumentMoniker": "ProductManager\\Controllers\\CarrinhoController.cs",
