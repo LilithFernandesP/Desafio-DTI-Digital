@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using ProductManager.data;
 using ProductManager.models.Dto;
 using ProductManager.models.entities;
@@ -19,26 +20,37 @@ namespace ProductManager.Controllers
         }
         #endregion
 
-        [HttpGet(Name = "GetProdutos")]
-        public ActionResult<List<Produto>> GetProdutos()
+        #region Retorna uma lista com todos os produtos do banco
+        [HttpGet]
+        public ActionResult<List<Produto>> GetProdutos([FromQuery] string? query)
         {
             try
             {
-                var produtos = dbContext.Produtos.ToList();
+                IQueryable<Produto> produtosQuery = dbContext.Produtos.AsQueryable();
 
-                if (produtos == null || produtos.Count == 0)
+                if (!string.IsNullOrWhiteSpace(query))
+                {
+                    produtosQuery = produtosQuery
+                        .Where(p => EF.Functions.Like(p.Nome, $"%{query}%"));
+                }
+
+                List<Produto> produtos = produtosQuery.ToList();
+
+                if (produtos.Count == 0)
                 {
                     return NoContent();
                 }
 
                 return Ok(produtos);
             }
-            catch (Exception ex)
+            catch
             {
-                return StatusCode(500, "Erro interno do servidor ao processar a solicitação.");
+                return StatusCode(500, "Erro ao pegar os produtos.");
             }
         }
+        #endregion
 
+        #region Criar um produto
         [HttpPost]
         public ActionResult<Produto> CreateProduto(AdicionarProdutoDto adicionarProdutoDto)
         {
@@ -52,7 +64,10 @@ namespace ProductManager.Controllers
             dbContext.SaveChanges();
             return Ok(produto);
         }
+        #endregion
 
+        #region  retorna um produto específico pela pesquisa de id
+        
         [HttpGet("{id}")]
         public ActionResult<Produto> GetProdutoById(Guid id)
         {
@@ -65,5 +80,6 @@ namespace ProductManager.Controllers
 
             return Ok(produto);
         }
+        #endregion
     }
 }

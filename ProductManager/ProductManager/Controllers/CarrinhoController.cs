@@ -21,9 +21,7 @@ namespace ProductManager.Controllers
         }
         #endregion
 
-
-
-        #region Finaliza carrinho e retorna os itens comprados
+        #region Finaliza carrinho 
 
         [HttpPut("{carrinhoId}/finalizar")]
         public IActionResult FinalizarCarrinho(Guid carrinhoId)
@@ -40,14 +38,22 @@ namespace ProductManager.Controllers
                 return BadRequest("Carrinho já finalizado.");
             }
 
-            carrinho.Finalizado = true;
+            // carrinho.Finalizado = true;
+
+            var itens = dbContext.CarrinhoItens
+             .Where(i => i.CarrinhoId == carrinhoId);
+
+            dbContext.CarrinhoItens.RemoveRange(itens);
+
             dbContext.SaveChanges();
 
+
             return Ok(carrinho);
+
         }
         #endregion
 
-
+        #region Criar Carrinho com id aleatório, eu poderia passar um userId para ligar o carrinho a um usuário
         [HttpPost("Criar Carrinho")]
         public ActionResult<Carrinho> CriarCarrinho() // esse não precisa de Dto, pois só cria um carrinho vazio
         {
@@ -64,6 +70,11 @@ namespace ProductManager.Controllers
             return Ok(novoCarrinho);
         }
 
+
+        #endregion
+
+        #region Get carrinho pelo id
+
         [HttpGet("{carrinhoId}")]
         public ActionResult<Carrinho> GetCarrinhoById(Guid carrinhoId)
         {
@@ -77,5 +88,7 @@ namespace ProductManager.Controllers
             }
             return Ok(carrinho);
         }
+
+        #endregion
     }
 }

@@ -3,6 +3,20 @@
   margin: 0 auto;
   width: 100%;
   color: #211304;
+  min-height: 100vh;
+  background: linear-gradient(180deg,rgba(237, 189, 125, 1) 0%, rgba(255, 249, 232, 1) 37%);
+}
+
+/* Esconde as setinhas nativas do input*/
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
 }
 
 @layer components{
@@ -12,4 +26,5 @@
   .Navbar i {
     @apply text-3xl;
   }
+
 }

@@ -33,6 +33,10 @@ namespace ProductManager.Controllers
             {
                 return NotFound("Carrinho não encontrado.");
             }
+            if(carrinho.Finalizado == true)
+            {
+                return BadRequest("Não é possível adicionar itens a um carrinho finalizado.");
+            }
             #region Tratamento item já existe
             //Conferir se já existe esse item no carrinho
             CarrinhoItem itemExistente = dbContext.CarrinhoItens
@@ -75,6 +79,37 @@ namespace ProductManager.Controllers
         }
         #endregion
 
+        #region atualizar quantidade do item no carrinho
+
+        [HttpPut("itens/{id}")]
+        public ActionResult<CarrinhoItem> AtualizarQuantidadeCarrinhoItem(Guid id, AtualizarQuantidadeDto dto)
+        {
+            // Encontra o item no carrinho pelo id
+            CarrinhoItem itemExistente = dbContext.CarrinhoItens.FirstOrDefault(ci => ci.Id == id);
+            if (itemExistente == null)
+            {
+                return NotFound("Item não encontrado no carrinho.");
+            }
+
+            itemExistente.Quantidade = dto.Quantidade;
+
+            // Garantir que a quantidade não seja menor que 1 nem maior que 10
+            if (itemExistente.Quantidade < 1)
+            {
+                dbContext.CarrinhoItens.Remove(itemExistente); // Remove o item se a quantidade for 0 ou menor
+            }
+            else if (itemExistente.Quantidade > 10)
+            {
+                itemExistente.Quantidade = 10;
+            }
+
+            dbContext.SaveChanges();
+
+            return Ok(itemExistente);
+        }
+
+        #endregion
+
         #region Remover Item do Carrinho
 
         [HttpDelete("{carrinhoId}/itens/{itemId}")]
@@ -96,6 +131,7 @@ namespace ProductManager.Controllers
         #endregion
 
         #region retornar itens no carrinho
+
         [HttpGet("{carrinhoId}/itens")]
         public ActionResult<List<CarrinhoItem>> GetItensDoCarrinho(Guid carrinhoId)
         {
@@ -113,6 +149,8 @@ namespace ProductManager.Controllers
 
             return Ok(itens);
         }
+
         #endregion
+
     }
 }

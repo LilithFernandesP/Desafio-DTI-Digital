@@ -1,11 +1,33 @@
 import {useState} from "react";
+import {toast, ToastContainer} from "react-toastify";
 
+// Esse card recebe UM produto e gera um card para mostrar no catálogo.
 const Card = ({produto}) => {
-    const [showModal, setShowModal] = useState(false);
     const [quantidade, setQuantidade] = useState(1);
-    const carrinhoId = "9E2B609C-DD63-4CD3-A683-822837340D1B"
-    const abrirModal = () => setShowModal(true);
-    const fecharModal = () => setShowModal(false);
+    // Como não fiz login, estou utilizando um carrinho de exemplo
+    const carrinhoId = "58F33A6D-9A2B-448A-93BF-D4E861CB27C2"
+
+    const incrementarQuantidade = () => {
+        setQuantidade(prevQuantidade => (prevQuantidade < 10 ? prevQuantidade + 1 : 10));
+    }
+    const decrementarQuantidade = () => {
+        setQuantidade(prevQuantidade => (prevQuantidade > 1 ? prevQuantidade - 1 : 1));
+    }
+
+    // Para garantir que o input manual não seja menor ou maior que 10
+    const handleChange = (e) => {
+        const valor = Number(e.target.value);
+        if (valor >= 1) {
+            setQuantidade(valor);
+        } else {
+            setQuantidade(1);
+        }
+        if (valor <= 10) {
+            setQuantidade(valor);
+        } else {
+            setQuantidade(10);
+        }
+    };
 
     async function AdicionarAoCarrinho() {
         const body = {
@@ -28,7 +50,7 @@ const Card = ({produto}) => {
 
             const data = await response.json();
             console.log('Produto adicionado ao carrinho:', data);
-            fecharModal();
+            toast.success(`${quantidade} ${produto.nome} adicionado ao carrinho`)
         } catch (error) {
             console.error('Erro ao adicionar produto ao carrinho:', error);
         }
@@ -37,46 +59,60 @@ const Card = ({produto}) => {
 
     return (
         <div>
-            <div
-                className=" block w-60 p-6 border border-default rounded-xl shadow-xl">
-                <div className="flex w-full justify-center  rounded-xl">
-                <a href="#">
-                    {produto.imagem &&
-                        <img className='w-[160px] h-[160px] rounded-base' src={produto.imagem} alt={produto.nome}/>}
-                </a>
-                </div>
-                <a href="#">
-                    <h5 className="mt-6 mb-2 text-2xl font-semibold tracking-tight text-heading">{produto.nome}</h5>
-                </a>
-                <div className="flex w-full justify-end gap-4">
-                    <p>R$ {produto.preco}</p>
-                    <button onClick={abrirModal}><i class="las la-plus-circle"></i></button>
-                </div>
+            <div className=" block w-60 p-6 border border-default rounded-xl shadow-xl">
 
-            </div>
-            {showModal && (
-                <div className="fixed inset-0 bg-amber-950/50  flex justify-center items-center">
-                    <div className="bg-[#EDBD7D] p-6 rounded-lg">
-                        <h2 className="text-xl mb-4">Selecione a Quantidade</h2>
+                <div className=" flex w-full justify-center  rounded-xl">
+                    <a href="#">
+                        {produto.imagem ?
+                            <img className='w-[160px] h-[160px] rounded-base' src={produto.imagem} alt={produto.nome}/>
+                        : <img className='w-[160px] h-[160px] rounded-base' src="NoImage.jpg" alt=""/>
+                        }
+                    </a>
+                </div>
+                <a href="#">
+                    <h5 className="mt-6 mb-2 text-2xl font-semibold tracking-tight text-heading truncate ">{produto.nome}</h5>
+                </a>
+                <div className='w-full flex justify-center'>
+                    <p className='text-2xl p-2 font-bold'>R$ {produto.preco}</p>
+                </div>
+                <div className="flex w-full justify-between gap-4 text-2xl">
+
+                    <div className='flex gap-4 content-center justify-center items-center mb-5 border rounded-md p-2'>
+                        <button
+                            className="flex justify-center rounded-xl px-2 bg-[#E79525] transform active:scale-125 transition-all duration-50  active:bg-amber-400 "
+                            onClick={decrementarQuantidade}>-
+                        </button>
                         <input
                             type="number"
                             value={quantidade}
-                            onChange={(e) => setQuantidade(Number(e.target.value))}
+                            onChange={handleChange}
                             min="1"
-                            className="border p-2 rounded-md mb-4 w-24"
+                            className=" w-10 text-center"
                         />
-                        <div className="flex justify-end gap-4">
-                            <button onClick={fecharModal} className="bg-gray-500 text-white p-2 rounded-md">Cancelar</button>
-                            <button
-                                onClick={AdicionarAoCarrinho}
-                                className="bg-blue-500 text-white p-2 rounded-md"
-                            >
-                                Adicionar ao Carrinho
-                            </button>
-                        </div>
+
+                        <button
+                            className="flex justify-center rounded-xl px-2 bg-[#E79525] transform active:scale-125 transition-all duration-50  active:bg-amber-400 "
+                            onClick={incrementarQuantidade}>+
+                        </button>
+
+                        <button onClick={AdicionarAoCarrinho}>
+                            <i className="las la-cart-plus text-4xl   hover:text-lime-500 hover:drop-shadow-md transform active:scale-125 transition-all duration-50 drop-shadow-lime-500/50"></i>
+                        </button>
+
                     </div>
                 </div>
-            )}
+                <ToastContainer
+                    position="bottom-right"
+                    autoClose={3000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    pauseOnHover
+                    draggable
+                    theme="light"
+                />
+
+            </div>
         </div>
     )
 }

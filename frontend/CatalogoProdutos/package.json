@@ -12,8 +12,13 @@
   "dependencies": {
     "@fontsource/courier-prime": "^5.2.8",
     "@tailwindcss/vite": "^4.1.18",
+    "primereact": "^10.9.7",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "react-loading-indicators": "^1.0.1",
+    "react-router-dom": "^7.10.1",
+    "react-toastify": "^11.0.5",
+    "react-use": "^17.6.0",
     "tailwindcss": "^4.1.18"
   },
   "devDependencies": {
@@ -29,5 +34,6 @@
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.46.4",
     "vite": "^7.2.4"
-  }
+  },
+  "start": "PORT=5173 react-scripts start"
 }
